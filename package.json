@@ -1,12 +1,12 @@
 {
   "name": "simple-github-gist-api-fix",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A way to store data on Github Gist. Now fixed",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest --config jestconfig.json",
-    "build": "rm -rf dist/ && tsc",
+    "build": "tsc",
     "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
   },
   "files": [
