@@ -7,7 +7,6 @@
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "rm -rf dist/ && tsc",
-    "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags",
     "deploy": "git add . && git commit -am \"Updating...\" && git push"
   },
   "files": [
